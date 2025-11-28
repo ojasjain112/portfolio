@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useTheme } from '../context/ThemeContext';
-import { Moon, Sun, Menu, X, Github, Linkedin, Gamepad2 } from 'lucide-react';
+import { Moon, Sun, Menu, X, Github, Linkedin, Gamepad2, Mail } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-scroll';
 import FlappyGame from './FlappyGame';
@@ -157,6 +157,9 @@ const Footer = () => (
                 </a>
                 <a href="https://www.linkedin.com/in/sushiljain112/" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-600 dark:hover:text-mint-green transition-colors">
                     <Linkedin size={20} />
+                </a>
+                <a href="mailto:ojasjain012@gmail.com" className="hover:text-emerald-600 dark:hover:text-mint-green transition-colors">
+                    <Mail size={20} />
                 </a>
             </div>
         </div>

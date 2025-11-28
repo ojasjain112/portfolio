@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Send, Github, Linkedin } from 'lucide-react';
+import { Send, Github, Linkedin, Mail } from 'lucide-react';
 
 const Contact = () => {
     return (
@@ -25,6 +25,9 @@ const Contact = () => {
                         </a>
                         <a href="https://www.linkedin.com/in/sushiljain112/" target="_blank" rel="noopener noreferrer" className="text-gray-900 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-mint-green transition-colors hover:-translate-y-1 transform duration-300">
                             <Linkedin size={24} />
+                        </a>
+                        <a href="mailto:ojasjain012@gmail.com" className="text-gray-900 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-mint-green transition-colors hover:-translate-y-1 transform duration-300">
+                            <Mail size={24} />
                         </a>
                     </div>
                 </motion.div>
