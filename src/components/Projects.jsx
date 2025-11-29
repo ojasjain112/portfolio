@@ -42,7 +42,7 @@ const Projects = () => {
                 >
                     <p className="text-emerald-600 dark:text-mint-green font-mono mb-4">02. My Work</p>
                     <h2 className="text-4xl md:text-5xl font-bold text-shadowed-green dark:text-white mb-6">Featured Projects</h2>
-                    <p className="text-gray-900 dark:text-gray-400 text-lg max-w-2xl mx-auto">
+                    <p className="text-gray-900 dark:text-gray-400 text-lg max-w-2xl">
                         A collection of projects I've worked on.
                     </p>
                 </motion.div>
