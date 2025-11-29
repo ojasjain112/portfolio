@@ -70,7 +70,7 @@ const FlappyGame = ({ onClose }) => {
                 return () => clearTimeout(timer);
             } else {
                 setGameState('PLAYING');
-                lastPipeTime.current = Date.now();
+                lastPipeTime.current = performance.now();
             }
         }
     }, [gameState, countdown]);
@@ -109,12 +109,20 @@ const FlappyGame = ({ onClose }) => {
             return;
         }
 
-        const loop = () => {
-            const now = Date.now();
+        let lastTime = performance.now();
+
+        const loop = (time) => {
+            const now = time;
+            const deltaTime = now - lastTime;
+            lastTime = now;
+
+            // Calculate time scale (1.0 at 60fps)
+            // Cap at 4.0 (15fps) to prevent huge jumps
+            const timeScale = Math.min(deltaTime / (1000 / 60), 4);
 
             // Physics
-            birdVel.current += GRAVITY;
-            birdY.current += birdVel.current;
+            birdVel.current += GRAVITY * timeScale;
+            birdY.current += birdVel.current * timeScale;
 
             // Floor/Ceiling Collision
             if (birdY.current >= dimensions.height - BIRD_SIZE) {
@@ -142,7 +150,7 @@ const FlappyGame = ({ onClose }) => {
             }
 
             // Move Pipes
-            pipes.current.forEach(p => p.x -= PIPE_SPEED);
+            pipes.current.forEach(p => p.x -= PIPE_SPEED * timeScale);
             pipes.current = pipes.current.filter(p => p.x + PIPE_WIDTH > 0);
 
             // Collision Detection
