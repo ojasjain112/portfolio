@@ -1,12 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Code2, Smartphone, Database, Globe, Terminal, Layout } from 'lucide-react';
+import { Code2, Smartphone, Database, Globe, Terminal, Layout, FileCode, BookOpen } from 'lucide-react';
 
 const skills = [
     { name: 'Flutter', icon: <Smartphone size={24} />, category: 'Mobile' },
     { name: 'React', icon: <Code2 size={24} />, category: 'Frontend' },
     { name: 'JavaScript', icon: <Globe size={24} />, category: 'Language' },
     { name: 'TypeScript', icon: <Terminal size={24} />, category: 'Language' },
+    { name: 'Python', icon: <Terminal size={24} />, category: 'Language' },
+    { name: 'Jupyter Notebook', icon: <BookOpen size={24} />, category: 'Tool' },
+    { name: 'HTML', icon: <FileCode size={24} />, category: 'Frontend' },
     { name: 'Firebase', icon: <Database size={24} />, category: 'Backend' },
     { name: 'Tailwind CSS', icon: <Layout size={24} />, category: 'Styling' },
 ];
@@ -24,7 +27,7 @@ const Skills = () => {
                 >
                     <p className="text-emerald-600 dark:text-mint-green font-mono mb-4">01. My Skills</p>
                     <h2 className="text-4xl md:text-5xl font-bold text-shadowed-green dark:text-white mb-6">Skills & Technologies</h2>
-                    <p className="text-gray-900 dark:text-gray-400 text-lg max-w-2xl mx-auto">
+                    <p className="text-gray-900 dark:text-gray-400 text-lg max-w-2xl">
                         Here are a few technologies I've been working with recently:
                     </p>
                 </motion.div>

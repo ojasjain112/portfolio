@@ -20,12 +20,12 @@ const projects = [
         year: '2024'
     },
     {
-        title: 'Task Manager',
-        description: 'A productivity tool for managing daily tasks and projects. Includes features like drag-and-drop organization, dark mode, and local storage persistence.',
-        tech: ['React', 'TypeScript', 'Vite'],
-        github: '#',
-        demo: '#',
-        year: '2023'
+        title: 'Plant Disease Outbreak Prediction Model',
+        description: 'Weather-Driven Plant Disease Outbreak Predictor A comprehensive full-stack machine learning application designed to prevent agricultural crop losses by predicting disease risks 1–7 days in advance. The system aggregates 80+ real-time weather parameters (including soil depth and atmospheric variables) to generate 500+ engineered features. Using an ensemble model (Random Forest + XGBoost), it provides location-specific risk assessments for 17 major plant diseases via an interactive web interface.',
+        tech: ['Python', 'JavaScript', 'HTML', 'CSS', 'Jupiter Notebook'],
+        github: 'https://github.com/ojasjain112/Plant-Disease-Outbreak-Prediction-Model',
+        demo: 'https://disease-outbreak-predictor.onrender.com',
+        year: '2024'
     }
 ];
 
